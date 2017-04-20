@@ -147,7 +147,7 @@ public:
                                        GlobalPropertyDeleter,
                                        GlobalPropertyEnumerator,
                                        wrapper);
-        otmpl->SetAccessCheckCallbacks(GlobalPropertyNamedAccessCheck,
+        otmpl->SetAccessCheckCallback(GlobalPropertyNamedAccessCheck,
                                        GlobalPropertyIndexedAccessCheck);
         return scope.Escape(Nan::New<Context>(static_cast<ExtensionConfiguration*>(NULL), otmpl));
     }
